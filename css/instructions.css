@@ -1,0 +1,16 @@
+@media screen and (max-width: 750px)
+{
+    .texte
+    {
+        max-height: 10%;
+    }
+}
+
+@media screen and (min-height: 1200px)
+{
+    .container-divs
+    {
+        margin-bottom:16%;
+        margin-top:7%!important;
+    }
+}

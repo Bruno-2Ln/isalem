@@ -1,0 +1,17 @@
+#div-input-captcha
+{
+    width: 200px;
+}
+
+@media screen and (max-width: 230px)
+{
+    #div-input-captcha
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #input-captcha
+    {
+        width: 90px;
+    }
+}

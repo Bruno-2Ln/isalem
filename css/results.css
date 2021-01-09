@@ -1,0 +1,18 @@
+.textarea-content
+{
+    min-height:370px;
+}
+
+@media screen and (min-height: 1200px)
+{
+    .container-divs
+    {
+        margin-top: 7%!important;
+        margin-bottom: 16%!important;
+    }
+    .container-divs-personality
+    {
+        margin-top: 7%!important;
+        margin-bottom: 25%!important;
+    }
+}

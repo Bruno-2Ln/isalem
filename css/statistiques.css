@@ -1,0 +1,46 @@
+.div-slide:hover
+{
+    background-color: #053f81;
+    color: white;
+}
+
+.container-divs
+{
+    margin-top: 8%!important;
+    margin-bottom: 25%!important;
+}
+
+#div-1
+{
+    margin-bottom: 5%!important;
+}
+
+#label-year, #label-month
+{
+    width: 125.2px!important;
+}
+
+#div-labels
+{
+    margin: auto;
+}
+
+@media screen and (max-width: 500px)
+{
+    #div-labels
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-height: 1024px)
+{
+    .container-divs
+    {
+        margin-top: 15%!important;
+        margin-bottom: 39%!important;
+    }
+
+}

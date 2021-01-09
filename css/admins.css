@@ -1,0 +1,52 @@
+/*admins.php*/
+
+.container-divs
+{
+    height: 70%;
+    margin-bottom: 10%!important;
+}
+
+#contact_mail
+{
+    display: block;
+    margin-bottom: 2%;
+    border: 3px #053f81 ridge;
+    background-color: #e9e6f5;
+    box-shadow: 6px 6px 8px -3px rgba(143,143,143,1);
+    padding: 1%;
+}
+
+@media screen and (max-width: 750px)
+{
+    #contact_mail
+    {
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-height: 1000px)
+{
+    .container-divs
+    {
+        margin-bottom: 20%;
+        margin-top: 12%!important;
+    }
+}
+
+/*updateAdmin.php*/
+/*signup.php*/
+
+@media screen and (min-height: 1200px)
+{
+    .container-divs
+    {
+        margin-top: 8%!important;
+        margin-bottom: 50%!important;
+    }
+    .container-divs-update-and-create
+    {
+        margin-top: 6%!important;
+        margin-bottom: 9%!important;
+    }
+}

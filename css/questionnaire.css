@@ -1,0 +1,136 @@
+/* isalem/questionnaire.php*/
+
+#statRequest
+{
+font-size: 1em!important;
+}
+
+#instructions
+{
+    box-shadow: 6px 6px 8px -3px rgba(143,143,143,1);
+    background-color: #e9e6f5;
+    
+    padding: 2%;
+}
+
+.order-instructions div
+{
+    border: 1px grey solid;
+    background-color:beige;
+    text-align: center;
+}
+
+.order-instructions
+{
+    width: 15%;
+}
+
+input[type=number]::-webkit-inner-spin-button 
+{ 
+    display: none; 
+} 
+
+footer
+{
+    display: flex!important;
+    flex-direction: row!important;
+}
+
+.question-answers
+{
+    border: 3px #053f81 ridge;
+    box-shadow: 6px 6px 8px -3px rgba(143,143,143,1);
+    background-color: #e9e6f5;
+
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.question-answers:hover
+{
+    border: 3px ridge #f48120;
+    box-shadow: 11px 11px 8px -2px rgba(143,143,143,1);  
+}
+
+.question
+{
+    color: #053f81;
+}
+
+.div-input, .input_answer
+{
+    width: 68.6px!important;
+} 
+
+@media screen and (max-width: 1366px)
+{
+    #instructions
+    {
+        width: 90%!important;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .question-answers
+    {
+        margin: 0.1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+    #container-test
+    {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+
+@media screen and (max-width: 290px)
+{
+    .input-and-answer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*admin/questionnaire.php*/
+
+.question-answers-admin
+{
+    border-left: 3px  #053f81 ridge;
+    border-bottom: 3px  #053f81 ridge;
+
+    box-shadow: 6px 6px 8px -3px rgba(143,143,143,1);
+    background-color: #e9e6f5;
+}
+
+.question-answers-admin:hover
+{
+    border-left: 3px #f48120 ridge;
+    border-bottom: 3px #f48120 ridge;
+    box-shadow: 11px 11px 8px -2px rgba(143,143,143,1);
+}
+
+.btn-submit
+{
+    max-width: 45px!important;
+    max-height: 35px!important;
+    min-width: 45px!important;
+    min-height: 35px!important;
+}
+
+.form-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-height: 1200px)
+{
+    .container-divs
+    {
+        margin-bottom: 21%!important;
+        margin-top: 10%!important;
+    }
+}

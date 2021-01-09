@@ -1,0 +1,88 @@
+#carouselAccueil
+{
+    width: 100%;
+    height: 42rem;
+    margin: 0 auto;
+}
+
+.carousel-item img
+{
+    width: 100%;
+    height: auto;
+}
+
+#carousel-inner
+{
+    margin:auto;
+}
+
+.d-block
+{
+    background-size: cover;
+}
+
+.title-header
+{
+    font-size: 3.2em;
+    font-weight: bolder;
+    color: beige;
+}
+
+#slide-2
+{
+    background-image: linear-gradient(rgba(87, 81, 81, 0.836) 0%, rgba(88, 85, 85, 0.5)), url(../image/faire-le-test-min.jpg);
+    background-size: cover;
+}
+
+#slide-1
+{
+    background: linear-gradient(rgba(87, 81, 81, 0.836) 0%, rgba(88, 85, 85, 0.5)), url(../image/en-savoir-plus-min.jpg);
+    background-size: cover;
+}
+
+#link-en-savoir-plus
+{
+    margin-top: 1%;
+    font-size: 1.2em;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 200px) and  (max-width: 767px)
+{
+    #carouselAccueil
+    {
+        height: 15rem;
+    }
+    #link-en-savoir-plus
+    {
+        width: 100%!important;
+        text-align: justify;
+    }
+    .title-header
+    {
+        font-size: 1.2em;
+        text-align: center!important;
+    }
+    button
+    {
+        font-size: 0.9em!important;
+    }
+    #container-btn-lg
+    {
+        width: 60%!important;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 900px)
+{
+    .title-header
+    {
+        font-size: 2em!important;
+        text-align: center!important;
+    }
+}

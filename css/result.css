@@ -1,0 +1,22 @@
+canvas
+{
+    background-color: white;
+}
+
+.coordinate
+{
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 400px) and (max-width: 992px)
+{
+    #result_graph
+    {
+        display: block!important;
+    }
+    .coordinates
+    {
+        display: flex!important;
+        justify-content: start!important;
+    }
+}

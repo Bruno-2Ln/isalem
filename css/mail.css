@@ -1,0 +1,52 @@
+.tr-mail
+{
+    display: none;
+}
+
+.table-mail td
+{
+    border:none;
+    margin: 0;
+    padding: 0;
+}
+
+.table-mail h3
+{
+    font-size: 1.2rem!important;
+}
+
+.td-title
+{
+    min-width: 136px;
+}
+
+@media screen and (min-width: 358px)
+{
+    .td-title
+    {
+        width: 152px!important;
+    }
+}
+
+@media screen and (min-height: 768px)
+{
+    .container-divs
+    {
+        margin-bottom: 10%!important;
+    }
+}
+
+
+@media screen and (min-height: 1200px)
+{
+    .container-divs-update
+    {
+        margin-top: 8%!important;
+        margin-bottom: 18%!important;
+    }
+    .container-divs
+    {
+        margin-top: 12%!important;
+        margin-bottom: 34%!important;
+    }
+}
