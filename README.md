@@ -60,7 +60,7 @@
 ### DEVELOPPER LA PARTIE BACK-END D’UNE APPLICATION WEB OU WEB MOBILE :
 ### Côté back-end, une page « db.php » où on retrouve le DataBaseHandler et ses différentes méthodes CRUD communique avec une page « display_function.php » gérant l’affichage des objets renvoyés. A noter une fonction « connect() » dans le constructor de la classe DataBaseHandler ayant pour but de permettre une connexion automatique à chaque instanciation de ce dernier. Une fonction « getIsalemDataBaseHandler » permet de rapidement l’instancier dans les différents fichiers.
 
-<img src="image/foreach.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/foreach.png" alt="extrait de code" width="600" heigth="400">
 
 ### Dans la globalité du projet les pages communiquent entre elles pour le traitement des données ou leur affichage. Le traitement des données après validation de certaines conditions peut soit se faire soit entrainer une redirection afin d’informer par un message l’utilisateur d’une erreur de champ (erreur de saisie, champ vide, …).
 #
@@ -102,8 +102,8 @@
 ### MAQUETTE DU SITE :
 ### Après discussion avec Mr Godiveau, à partir de ses attentes de gestion des composants du site et après recherches pour comprendre l’architecture et comment fonctionne le questionnaire ISALEM, j’ai, à partir de draw.io, maquetter le projet.
 
-<img src="image/maquette1.png" alt="maquette du projet partie 1" width="900">
-<img src="image/maquette2.png" alt="maquettre du projet partie 2" width="900">
+<img src="image/maquette1.png" alt="maquette du projet partie 1" width="500">
+<img src="image/maquette2.png" alt="maquettre du projet partie 2" width="500">
 
 ### FRONT-END :
 ### Pour cette partie j’ai utilisé les langages suivants :
@@ -148,9 +148,9 @@
 ### A partir de cela, il me fallait créer, dans le fichier « db.php », des méthodes CRUD, plus précisément des READ ou SELECT, appartenant à ma classe « DataBaseHandler ». Ainsi que des fonctions d’affichage, dans un fichier spécifique à ces fonctions (« display_function.php »), pour les méthodes renvoyant des objets.
 ### Pour cela j’ai créé 2 méthodes, l’une permet la récupération d’un objet « question » par son ID et l’autre la récupération d’un tableau d’objets de réponses par l’ID d’une question.
 
-<img src="image/annexe1.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/annexe1.png" alt="extrait de code" width="500" heigth="400">
 
-<img src="image/annexe2.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/annexe2.png" alt="extrait de code" width="600" heigth="400">
 
 ### Ainsi l’affichage peut se faire dans la logique suivante :
 - ### 	Une boucle « for » qui pour chaque tour va utiliser l’index comme paramètre de la méthode getQuestion(int $id) , l’objet récupéré sera donné comme paramètre à sa fonction d’affichage.
@@ -167,11 +167,11 @@
 - ### Solution apportée :
 ### Afin de récupérer les valeurs des 48 réponses et pouvoir rediriger chacune d’elle dans la bonne variable, il me fallait à la fois une identité propre à chaque réponse mais aussi un repère permettant de les diriger vers les bonnes variables nécessaires à l’algorithme. J’ai donc ajouté une colonne « category » à la table « answer », celles-ci au nombre de 4 (Ab, Ac, Ai, Ar). J’ai ainsi prédéfini dans quelle variable traiter la valeur de chaque réponse. Pour l’identité propre, j’ai ajouté une colonne « numberInList » à ma table, attribuant ainsi un nombre de 1 à 48. 
 
-<img src="image/extrait1.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/extrait1.png" alt="extrait de code" width="1000" heigth="400">
 
 ### Chaque réponse étant identifiable l’une de l’autre, j’ai donc pu diriger avec exactitude leur valeur dans l’une des 4 variables avant de procéder au calcul de x et y.
 
-<img src="image/extrait2.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/extrait2.png" alt="extrait de code" width="1000" heigth="400">
 
 ### Le fait de les inclure d’abord dans un tableau me permet une vérification supplémentaire, à savoir que chaque tableau à la fin du foreach() possède bien 12 valeurs et je vérifies également que la somme de tous les tableaux soit bien égale à 120 car il ne peut en être autrement.
 
@@ -179,7 +179,7 @@
 
 ### Après vérification à la question « plus ou moins de 18 ans » il est possible de procéder au calcul de x et y.
 
-<img src="image/extrait4.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/extrait4.png" alt="extrait de code" width="900" heigth="400">
 
 ## Affichage du résultat :
 - ### Problématique rencontrée :
@@ -207,34 +207,34 @@
 
 <img src="image/extraitjs2.png" alt="extrait de code" width="700" heigth="400">
 
-<img src="image/graphique1.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/graphique1.png" alt="extrait de code" width="300" heigth="300">
 
 ### Puis effectuer la graduation des axes à l’échelle de 5px pour 1mm.
 
-<img src="image/extraitjs3.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/extraitjs3.png" alt="extrait de code" width="500" heigth="400">
 
-<img src="image/graphique2.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/graphique2.png" alt="extrait de code" width="300" heigth="300">
 
 ### La graduation nécessitait un repère plus grand tous les 25px (ou à taille réelle 5mm), j’ai mis en place pour cela 2 fonctions qui les tracent en partant du point central du canvas, visuellement 0 et dans sa programmation du canvas (190,190).
 
 <img src="image/annexe3.png" alt="extrait de code" width="700" heigth="400">
 
 
-<img src="image/extraitjs7.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/extraitjs7.png" alt="extrait de code" width="400" heigth="400">
 
-<img src="image/graphique3.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/graphique3.png" alt="extrait de code" width="300" heigth="300">
 
 ### J’ai ensuite récupéré les valeurs de x et y dont l’information est située sous le graphique afin de les utiliser dans la création du repère visuel. Pour cela j’ai également dû convertir leur valeur afin d’être à l’échelle du graphique.
 
 <img src="image/extraitjs4.png" alt="extrait de code" width="700" heigth="400">
 
-<img src="image/graphique4.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/graphique4.png" alt="extrait de code" width="300" heigth="300">
 
 ### La dernière étape consistait à faire apparaître les noms des 4 grands profils sur le graphique. Là également, j’ai créé une fonction me permettant de rapidement le faire.
 
 <img src="image/extraitjs5.png" alt="extrait de code" width="700" heigth="400">
 
-<img src="image/graphique5.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/graphique5.png" alt="extrait de code" width="300" heigth="300">
 
 ### LES STATISTIQUES :
 ### Du côté administrateur, l’affichage de statistiques était une demande spécifique du commanditaire du projet et comme pour l’affichage du résultat précédemment expliqué cela a nécessité l’utilisation de PHP et de Javascript.
@@ -245,14 +245,14 @@
 ### L’administrateur peut donc s’il remplit les 2 champs obtenir les statistiques jour par jour du mois de l’année demandé ou s’il ne remplit pas le mois, ceux mois par mois de l’année souhaitée. 
 ### Je récupère ensuite par l’intermédiaire de $_POST les données afin de les interpréter et déterminer la demande de l’administrateur ; souhaite t’il les statistiques sur un mois ou de toute une année ?
 
- <img src="image/annexe4.png" alt="extrait de code" width="700" heigth="400">
+ <img src="image/annexe4.png" alt="extrait de code" width="900" heigth="400">
 
 ### Après cette condition vérifiée, le traitement de la demande, maintenant comprise, peut avoir lieu. Pour cela, comme visible aux lignes 97 et 103 de l’extrait de code de l’Annexe 4 j’ai mis en place 2 fonctions.
 ### L’une pour renvoyer toutes les données mois par mois d’une année (voir Annexe 5) et la seconde pour renvoyer celles jour par jour dans un mois (voir Annexe 6).
 
-<img src="image/annexe5.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/annexe5.png" alt="extrait de code" width="900" heigth="400">
 
-<img src="image/annexe6.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/annexe6.png" alt="extrait de code" width="900" heigth="400">
 
 ### Ces deux fonctions me permettent de récupérer un tableau d’objets dont les propriétés permettent plusieurs choses :
 ### D’abord la création du carrousel Bootstrap, qui va nécessiter une <div> dont l’ID prend la valeur « slide-$number », et également le remplissage du « slide » avec les bonnes données. Une fonction d’affichage, unique aux deux possibilités, inclus dans un « foreach() » permet cela :
@@ -295,7 +295,7 @@
 
 ### 8-	Vérification si la case « Email de contact » du formulaire a été coché. Si c’est la cas l’adresse email de ce nouvel admin doit être la seule enregistrée comme telle en base de données. Il convient par une méthode d’enlever l’adresse email de contact actuelle pour permettre à celle-ci de la remplacer.
 
-<img src="image/cleandata().png" alt="extrait de code" width="700" heigth="400">
+<img src="image/cleanData().png" alt="extrait de code" width="400" heigth="400">
 
 <img src="image/contactmail1.png" alt="extrait de code" width="700" heigth="400">
 
@@ -304,8 +304,6 @@
 ### 9-	Cryptage du mot de passe par l’utilisation de password_hash().
 
 ### 10-	« Nettoyage » des données reçues par la fonction cleanData().
-
-<img src="ressources/arborescence.png" alt="arborescense du portfolio" width="200">
 
 ### 11-	Appel de la méthode createAdmin()
 
@@ -322,7 +320,7 @@
 
 ### J’ai pu à partir de cette page analyser les données et procéder à mes vérifications :
 
-<img src="image/annexe7.png" alt="extrait de code" width="700" heigth="400">
+<img src="image/annexe7.png" alt="extrait de code" width="1000" heigth="800">
 
 
 - ### Dans l’encadré bleu, les données reçues dans $_POST : On peut voir la réponse « over18 » ainsi que les 48 réponses du questionnaire. Je les ai classé à l’aide d’une boucle for dans 4 tableaux permettant de regrouper toutes les réponses d’une même « famille » (Ab, Ai, Ac, Ar) sur lesquels j’ai utilisé la fonction print_r() afin d’en améliorer la lisibilité et la comparaison avec les 4 tableaux qui suivront.
@@ -334,21 +332,21 @@
 
 ### Ces vérifications terminées l’affichage peut à présent être fait, vérifiant ainsi que les données x et y tous deux affichés sous le graphique et le profil qui l’accompagne coïncident avec la page précédente.
 
-<img src="image/jeuxessai1.png" alt="extrait de code" width="200">
+<img src="image/jeuxessai1.png" alt="extrait de code" width="700">
 
 ### Maintenant la récupération, le calcul et l’affichage vérifiés, au fur et à mesure de la programmation du projet, il me fallait régulièrement vérifier que le traitement et l’affichage du résultat se fassent toujours correctement. Il est vite devenu répétitif et contraignant de soit enregistrer une valeur par défaut qui par conséquent offrait la possibilité d’un questionnaire non conforme, soit de remplir aléatoirement à la main les réponses …
 ### J’ai donc mis en place une fonction Javascript auto-invoquée qui m’a permis pour chaque consultation de la page du questionnaire, d’obtenir un questionnaire préremplis de réponses aléatoires et répondant aux attentes de conformité.
 
-<img src="image/testrandom().png" alt="extrait de code" width="200">
+<img src="image/testrandom().png" alt="extrait de code" width="900">
 
-<img src="image/testrandom()2.png" alt="extrait de code" width="200">
+<img src="image/testrandom()2.png" alt="extrait de code" width="900">
 
 ### Des fonctions PHP m’ont été forts utiles tout au long du projet, comme par exemple ici pour vérifier le traitement des réponses et donc avant même cela, leur bonne réception, l’utilisation de print_r($_POST) fut primordiale. Son utilisation ainsi que var_dump() furent dans la globalité du projet très utilisées me permettant de procéder à des tests et à mieux comprendre certaines de mes erreurs et donc de corriger mon code.
 
 ### COTE ADMINISTRATEUR :
 ### Du côté de l’interface administrateur, la particularité des tests à effectuer se trouvait dans la page de statistiques.
 
-<img src="image/statsexemple.png" alt="extrait de code" width="200">
+<img src="image/statsexemple.png" alt="extrait de code" width="400">
 
 ### Il fallait du côté serveur à l’aide d’un select récupérer le nombre de dates entre deux bornes et ensuite du côté client les interpréter et les manipuler pour les intégrer dans un graphique.
 ### Du côté programmation Javascript, l’utilisation du console.log() à différents niveaux m’a accompagnait tout au long du travail réalisé. Ce qui m’a permis de comprendre les données récupérées et de rectifier mon code dès que cela était nécessaire et d’avancer.
@@ -364,11 +362,11 @@
 ### De plus une hiérarchie des administrateurs a été mise en place, donnant place à deux rôles possibles, SUPER_ADMIN et ADMIN. Le but étant de ne permettre la gestion des administrateurs et donc l’accès à cette partie de l’interface uniquement à un SUPER_ADMIN. Pour cela une colonne « rôle » existe dans la table « admin » ayant comme valeur « 1 » pour un SUPER_ADMIN et « 0 » pour un ADMIN. Sur la page « admins.php » ainsi que ses pages de traitements, il m’a donc suffi après vérification d’un admin que celui-ci possède bien « 1 » comme valeur de colonne « rôle ».
 ### Sachant que suivant le rôle, que ce soit un simple utilisateur, un SUPER_ADMIN ou un ADMIN, cette vérification me permet également d’afficher un menu qui diffère en fonction des droits de l’utilisateur.
 
-<img src="image/menuutilisateur.png" alt="extrait de code" width="200">
+<img src="image/menuutilisateur.png" alt="extrait de code" width="400">
 
-<img src="image/menuadmin.png" alt="extrait de code" width="200">
+<img src="image/menuadmin.png" alt="extrait de code" width="400">
 
-<img src="image/menusuperadmin.png" alt="extrait de code" width="200">
+<img src="image/menusuperadmin.png" alt="extrait de code" width="400">
 
 ### CROSS SIDE SCRIPTING (XSS) :
 ### Afin de prévenir ce type de faille et donc d’éviter l’injection de contenu à partir des formulaires présents dans les différentes pages du site, la fonction htmlspecialchars() est systématiquement utilisée sur les variables contenant les entrées des champs des formulaires, permettant de convertir les caractères spéciaux. Cette fonction est utilisée au sein de la fonction cleanData().
@@ -378,11 +376,11 @@
 ### C’est le cas par exemple de l’instruction n° 2 qui apparaît sous la forme d’une liste à puces, comme ceci :
 
 
-<img src="image/xss.png" alt="capture d'écran" width="200">
+<img src="image/xss.png" alt="capture d'écran" width="400">
 
 ### Il fallait donc, d’un côté pour le visiteur permettre la mise en page HTML de s’exécuter correctement, comme sur l’exemple ci-dessus, et du côté administrateur permettre lors d’une éventuelle modification ou création la possibilité de retrouver de manière visuelle le signalement des balises et pouvoir si besoin les modifier.
 
-<img src="image/xss2.png" alt="capture d'écran" width="200">
+<img src="image/xss2.png" alt="capture d'écran" width="400">
 
 ### La fonction html_entity_decode($variable, ENT_HTML5) est donc utilisée à chaque lecture nécessaire des données faisant le chemin inverse de la fonction htmlspecialchars() permettant la lecture des balises HTML et donc la mise en page et prenant comme 1er argument la donnée voulue, le 2ème étant le type de document devant être utilisé.
 ### Après différents tests, j’ai pu me rendre compte que de cette façon, la fonction permet d’éviter la lecture de certaines balises <script></script>, celles dont les chaînes se trouvaient entourées de double-guillemets mais pas celles entourées de guillemets simples. Après réflexion sur plusieurs possibilités comme l’utilisation de preg_replace à différents niveaux mais qui ne donneraient pas pleinement satisfaction, j’ai opté pour preg_match(). Partant du principe qu’aucune balise <script></script> ne peut se trouver dans la donnée envoyée, si après vérification cela s’avère pourtant être le cas, le processus de traitement de donnée est tout simplement bloqué et une redirection se ferait sur la page d’accueil.
